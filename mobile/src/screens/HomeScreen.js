@@ -63,8 +63,8 @@ export default function HomeScreen({ navigation }) {
       const result = await ImagePicker.launchCameraAsync({
         mediaTypes: ImagePicker.MediaTypeOptions.Images,
         allowsEditing: true,
-        aspect: [1, 1],
         quality: 0.8,
+        // No aspect ratio constraint - free-form cropping
       });
 
       if (!result.canceled && result.assets[0]) {
@@ -83,8 +83,8 @@ export default function HomeScreen({ navigation }) {
       const result = await ImagePicker.launchImageLibraryAsync({
         mediaTypes: ImagePicker.MediaTypeOptions.Images,
         allowsEditing: true,
-        aspect: [1, 1],
         quality: 0.8,
+        // No aspect ratio constraint - free-form cropping
       });
 
       if (!result.canceled && result.assets[0]) {
@@ -181,7 +181,6 @@ export default function HomeScreen({ navigation }) {
               colors={['#4CAF50', '#45a049']}
               style={styles.actionButtonGradient}
             >
-              <Text style={styles.actionButtonIcon}>📷</Text>
               <Text style={styles.actionButtonText}>Take Photo</Text>
             </LinearGradient>
           </TouchableOpacity>
@@ -195,7 +194,6 @@ export default function HomeScreen({ navigation }) {
               colors={['#2196F3', '#1976D2']}
               style={styles.actionButtonGradient}
             >
-              <Text style={styles.actionButtonIcon}>🖼️</Text>
               <Text style={styles.actionButtonText}>Choose from Gallery</Text>
             </LinearGradient>
           </TouchableOpacity>
@@ -203,7 +201,7 @@ export default function HomeScreen({ navigation }) {
 
         {/* Info Card */}
         <View style={styles.infoCard}>
-          <Text style={styles.infoTitle}>💡 How it works</Text>
+          <Text style={styles.infoTitle}>How it works</Text>
           <Text style={styles.infoText}>
             1. Select an AI model{'\n'}
             2. Take a photo or choose from gallery{'\n'}

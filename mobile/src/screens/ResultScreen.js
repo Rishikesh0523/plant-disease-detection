@@ -47,9 +47,9 @@ export default function ResultScreen({ route, navigation }) {
   const getHealthStatusText = (prediction) => {
     const className = prediction?.class?.toLowerCase() || '';
     if (className.includes('healthy')) {
-      return '✓ Healthy Plant';
+      return 'Healthy Plant';
     }
-    return '⚠ Disease Detected';
+    return 'Disease Detected';
   };
 
   const getRecommendation = (prediction) => {
@@ -91,7 +91,7 @@ export default function ResultScreen({ route, navigation }) {
   if (error) {
     return (
       <View style={styles.errorContainer}>
-        <Text style={styles.errorIcon}>⚠️</Text>
+        <Text style={styles.errorIcon}>!</Text>
         <Text style={styles.errorTitle}>Analysis Failed</Text>
         <Text style={styles.errorText}>{error}</Text>
         <TouchableOpacity style={styles.retryButton} onPress={analyzePlant}>
@@ -157,7 +157,7 @@ export default function ResultScreen({ route, navigation }) {
 
         {/* Recommendation Card */}
         <View style={styles.recommendationCard}>
-          <Text style={styles.recommendationTitle}>💊 Recommendation</Text>
+          <Text style={styles.recommendationTitle}>Recommendation</Text>
           <Text style={styles.recommendationText}>
             {getRecommendation(result.prediction)}
           </Text>
@@ -167,7 +167,7 @@ export default function ResultScreen({ route, navigation }) {
         {result.top_predictions && result.top_predictions.length > 1 && (
           <View style={styles.topPredictionsCard}>
             <Text style={styles.topPredictionsTitle}>
-              🔍 Other Possibilities
+              Other Possibilities
             </Text>
             {result.top_predictions.slice(1, 5).map((pred, index) => (
               <View key={index} style={styles.predictionItem}>
