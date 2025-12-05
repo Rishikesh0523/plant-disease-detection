@@ -1,8 +1,16 @@
 // API Configuration
-// Update this with your computer's IP address when testing on a physical device
-// Find your IP: ipconfig (Windows) or ifconfig (Mac/Linux)
-export const API_BASE_URL = 'http://192.168.1.6:8000';
+// Update this based on your testing environment
 
-// For Android Emulator, use: http://10.0.2.2:8000
-// For iOS Simulator, use: http://localhost:8000
-// For Physical Device, use: http://YOUR_COMPUTER_IP:8000
+// CHANGE THIS BASED ON YOUR SETUP:
+// - 'emulator': For Android Emulator
+// - 'physical': For Physical Device or Expo Go
+// - 'simulator': For iOS Simulator
+const DEVICE_TYPE = 'physical'; // <<< CHANGE THIS
+
+const API_URLS = {
+  emulator: 'http://10.0.2.2:8000',      // Android Emulator
+  simulator: 'http://localhost:8000',     // iOS Simulator
+  physical: 'http://192.168.1.4:8000',   // Physical Device (your computer's IP)
+};
+
+export const API_BASE_URL = API_URLS[DEVICE_TYPE];
