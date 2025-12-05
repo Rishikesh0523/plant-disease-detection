@@ -1,29 +1,3 @@
-{
-  "name": "plant-disease-detector",
-  "version": "1.0.0",
-  "main": "node_modules/expo/AppEntry.js",
-  "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
-  },
-  "dependencies": {
-    "@react-navigation/native": "latest",
-    "@react-navigation/native-stack": "latest",
-    "axios": "latest",
-    "expo": "latest",
-    "expo-camera": "latest",
-    "expo-image-picker": "latest",
-    "expo-linear-gradient": "latest",
-    "expo-status-bar": "latest",
-    "react": "^19.1.0",
-    "react-native": "^0.81.5",
-    "react-native-safe-area-context": "latest",
-    "react-native-screens": "~4.16.0"
-  },
-  "devDependencies": {
-    "@babel/core": "latest"
-  },
-  "private": true
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:45518ce476245892f45f7fd77c2f338297129c486d3d8c969ad22aef810ce744
+size 790
